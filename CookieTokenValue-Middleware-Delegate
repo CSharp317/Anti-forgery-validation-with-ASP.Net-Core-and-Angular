@@ -1,3 +1,4 @@
+//Sets a cookie, with the token value, so that it can process the request done by adding a middleware delegate.
 app.Use(next => context =>
 {
     if (context.Request.Path.Value.IndexOf("/api", StringComparison.OrdinalIgnoreCase) != -1)
