@@ -5,3 +5,4 @@ public void ConfigureServices(IServiceCollection services)
     services.AddMvc()
         .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 }
+//ASP.NET Core app knows about the token which is sent along with Request as header
