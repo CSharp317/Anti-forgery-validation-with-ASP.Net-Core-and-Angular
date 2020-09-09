@@ -1,0 +1,7 @@
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
+    services.AddDbContext<BooksApiDbContext>(options => options.UseInMemoryDatabase("BooksDb"));
+    services.AddMvc()
+        .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+}
